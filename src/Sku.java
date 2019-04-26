@@ -8,9 +8,9 @@ public class Sku implements Comparable<Sku> {
     private String prep;
     private String prepType;
     private String label;
-    private String quantityShipped;
+    private int quantity;
 
-    public Sku(String merchantSku, String title, String asin, String fnsku, String externalID, String condition, String prep, String prepType, String label, String quantityShipped) {
+    public Sku(String merchantSku, String title, String asin, String fnsku, String externalID, String condition, String prep, String prepType, String label, int quantity) {
         this.merchantSku = merchantSku;
         this.title = title;
         this.asin = asin;
@@ -20,7 +20,7 @@ public class Sku implements Comparable<Sku> {
         this.prep = prep;
         this.prepType = prepType;
         this.label = label;
-        this.quantityShipped = quantityShipped;
+        this.quantity = quantity;
     }
 
     public String getMerchantSku() {
@@ -95,13 +95,18 @@ public class Sku implements Comparable<Sku> {
         this.label = label;
     }
 
-    public String getQuantityShipped() {
-        return quantityShipped;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setQuantityShipped(String quantityShipped) {
-        this.quantityShipped = quantityShipped;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
+
+    public void addQuantity(int quantity){
+        this.quantity += quantity;
+    }
+
 
     @Override
     public int compareTo(Sku o) {

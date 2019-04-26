@@ -101,7 +101,7 @@ public class ShippingPlan {
                 for ( int k = 0; k < fufillmentCenters.get(j).getSkusInShipment().size(); k++){
 
                     if(skusInPlan.get(i).compareTo(fufillmentCenters.get(j).getSkusInShipment().get(k)) == 0){
-                        str.append(fufillmentCenters.get(j).getSkusInShipment().get(k).getQuantityShipped() + "\t");
+                        str.append(fufillmentCenters.get(j).getSkusInShipment().get(k).getQuantity() + "\t");
                         check = -1;
                         break;
                     }

@@ -89,7 +89,7 @@ public class Shipment implements Comparable<Shipment> {
 
         for (int i = 0 ; i <skusInShipment.size(); i++){
 
-            str.append(skusInShipment.get(i).toString() + "\t" + skusInShipment.get(i).getQuantityShipped());
+            str.append(skusInShipment.get(i).toString() + "\t" + skusInShipment.get(i).getQuantity());
             str.append("\n");
         }
 
