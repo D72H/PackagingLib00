@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class ShippingPlan implements Serializable {
     private String planID;
     private ArrayList<Shipment> fufillmentCenters = new ArrayList<Shipment>();
-    private ArrayList<Sku> skusInPlan = new ArrayList<>();
+    private ArrayList<Sku> skusInPlan;
     private int totalSkus;
     private int totalUnits;
 
@@ -12,8 +12,8 @@ public class ShippingPlan implements Serializable {
         this.planID = fufillmentCenters.get(0).getPlanID();
         copy(this.fufillmentCenters, fufillmentCenters);
         skusInPlan = setSkusInPlan(fufillmentCenters);
-        totalSkus = skusInPlan.size();
         setTotalUnits();
+        totalSkus = skusInPlan.size();
     }
 
 
