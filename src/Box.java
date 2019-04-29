@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Box {
+public class Box implements Serializable {
     ArrayList<Sku> boxContents = new ArrayList<>();
     int boxNumber;
     double length, width, height, weight;

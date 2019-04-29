@@ -1,4 +1,6 @@
-public class Sku implements Comparable<Sku> {
+import java.io.Serializable;
+
+public class Sku implements Comparable<Sku>, Serializable {
     private String merchantSku;
     private String title;
     private String asin;

@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ShippingPlan {
+public class ShippingPlan implements Serializable {
     private String planID;
     private ArrayList<Shipment> fufillmentCenters = new ArrayList<Shipment>();
     private ArrayList<Sku> skusInPlan = new ArrayList<>();

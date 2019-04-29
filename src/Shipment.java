@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Shipment implements Comparable<Shipment> {
+public class Shipment implements Comparable<Shipment>, Serializable {
     private String planID;
     private String shipmentID;
     private String location;

@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
 
-public class Payload {
+public class Payload implements Serializable {
     Shipment shipment;
     ArrayList<Box> boxes = new ArrayList<>();
 
