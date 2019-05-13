@@ -1,16 +1,16 @@
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Box implements Serializable {
+public class CardboardBox implements Serializable {
     ArrayList<Sku> boxContents = new ArrayList<>();
     int boxNumber;
     double length, width, height, weight;
 
-    public Box(int boxNumber){
+    public CardboardBox(int boxNumber){
         this.boxNumber = boxNumber;
     }
 
-    public Box(ArrayList<Sku> boxContents, int boxNumber, double length, double width, double height, double weight) {
+    public CardboardBox(ArrayList<Sku> boxContents, int boxNumber, double length, double width, double height, double weight) {
         this.boxContents = boxContents;
         this.boxNumber = boxNumber;
         this.length = length;

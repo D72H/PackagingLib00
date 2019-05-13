@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 public class Payload implements Serializable {
     Shipment shipment;
-    ArrayList<Box> boxes = new ArrayList<>();
+    ArrayList<CardboardBox> cardboardBoxes = new ArrayList<>();
 
-    public Payload(Shipment shipment, ArrayList<Box> boxes){
+    public Payload(Shipment shipment, ArrayList<CardboardBox> cardboardBoxes){
         this.shipment = shipment;
-        copy(this.boxes, boxes);
+        copy(this.cardboardBoxes, cardboardBoxes);
     }
 
     private <T> void copy(ArrayList<T> list0, ArrayList<T> list1) {
@@ -26,11 +26,11 @@ public class Payload implements Serializable {
         this.shipment = shipment;
     }
 
-    public ArrayList<Box> getBoxes() {
-        return boxes;
+    public ArrayList<CardboardBox> getCardboardBoxes() {
+        return cardboardBoxes;
     }
 
-    public void setBoxes(ArrayList<Box> boxes) {
-        this.boxes = boxes;
+    public void setCardboardBoxes(ArrayList<CardboardBox> cardboardBoxes) {
+        this.cardboardBoxes = cardboardBoxes;
     }
 }
